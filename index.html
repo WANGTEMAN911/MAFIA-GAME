@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night Has Come — Mafia O'yini</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="day-mode">
+
+    <div class="main-layout">
+        <div class="game-area">
+            <header>
+                <h1 class="logo-title">NIGHT HAS COME</h1>
+                <div class="status-bar">
+                    <span id="phase-text" class="phase-indicator">KUNDUZ: MUHOKAMA VA OVOZ BERISH</span>
+                    <div id="timer-display" class="timer-box">00:60</div>
+                </div>
+            </header>
+
+            <div class="controls-bar">
+                <button id="start-btn" class="active-btn" onclick="assignRoles()">Rollarni Taqsimlash</button>
+                <button id="next-btn" class="disabled-btn" onclick="togglePhase()" disabled>Tunga O'tish</button>
+            </div>
+
+            <div id="players-list" class="grid-container"></div>
+        </div>
+
+        <div class="communication-panel">
+            <div class="panel-header">
+                <h3>O'yin Chati</h3>
+                <div class="voice-controls">
+                    <button class="voice-btn" id="mic-toggle" title="Mikrofon">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                    <span id="voice-status">O'ff</span>
+                </div>
+            </div>
+
+            <div class="chat-messages" id="chat-box">
+                <p class="system-msg"> Xonaga xush kelibsiz! Rollarni kuting.</p>
+            </div>
+
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Xabar yozing...">
+                <button id="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
